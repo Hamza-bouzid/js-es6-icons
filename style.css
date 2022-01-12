@@ -41,7 +41,7 @@ header {
 #content {
   background-color: #dddddd;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
