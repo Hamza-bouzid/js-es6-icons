@@ -31,9 +31,10 @@ function generaBox(box) {
   // Bonus
   container.innerHTML += `
   <div class="box">
-    <i class="${box.family} ${box.prefix}${box.name}" style="color:${box.color}"></i>
+    <i class="${box.family} ${box.prefix}${box.name}" style="color:#${colorGenerator(6)}"></i>
     <h4>${box.name}</h4>
   </div>
+  
   
   `;
 }
