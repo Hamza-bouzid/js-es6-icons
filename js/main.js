@@ -1,7 +1,7 @@
 const container = document.getElementById("content");
 const selection = document.getElementById("tipo");
 
-all();
+filtro("all");
 
 selection.addEventListener("change", function () {
   container.innerHTML = "";
@@ -12,7 +12,7 @@ selection.addEventListener("change", function () {
   } else if (selection.value == "vegetable") {
     filtro("vegetable");
   } else if (selection.value == "all") {
-    all();
+    filtro("all");
   }
 });
 
@@ -41,14 +41,8 @@ function generaBox(box) {
 
 function filtro(tipo) {
   dati.forEach((element) => {
-    if (element.type == tipo) {
+    if (element.type == tipo || tipo == "all") {
       generaBox(element);
     }
-  });
-}
-
-function all() {
-  dati.forEach((element) => {
-    generaBox(element);
   });
 }
